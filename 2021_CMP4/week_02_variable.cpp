@@ -5,8 +5,7 @@
 //  Created by Gang il Lee on 2021/09/08.
 //
 
-#include <iostream>
-#include <string>
+#include "common_lib.h"
 #include "week_02_variable.hpp"
 #define NEW_LINE '\n'
 
