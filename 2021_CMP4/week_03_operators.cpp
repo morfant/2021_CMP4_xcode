@@ -7,8 +7,7 @@
 
 #include "common_lib.h"
 #include "week_03_operators.hpp"
-
-#include <bitset>
+#include <bitset> // 2진수를 표기하기 위한 라이브러리
 
 using namespace std;
 
@@ -40,7 +39,35 @@ void run_03() {
     cout << "suffix y: " << y << endl;
     
     
+    // bit 연산자
+    int b = 3; // 0000 0011
+    int c = b & 2; // 0000 0010 -> 00000010
+    std::cout << c << std::endl;
+
+    b &= 6; // 00000110
+    std::cout << b << std::endl;
+
+    b <<= 1;
+    std::cout << b << std::endl;
+
+
+    // 타입에 따라 달라질 수 있는 bit shift의 결과
+    int d = 0b10000110; // 32bit type, 00000000 00000000 00000000 10000110
+    std::cout << "before - int: " << (int)d << std::endl;
     
+    d <<= 1; // 00000000 00000000 00000001 00001100
+    std::cout << "after - int: " << (int)d << std::endl;
+    std::cout << "NOT - int: " << std::bitset<sizeof(d) * 8>(~d) <<  std::endl;
+
+    unsigned char e = 0b10000110; // 8bit type, 10000110
+    std::cout << "before - uchar: " << (int)e << std::endl;
+
+    e <<= 1; // 00001100
+    std::cout << "after - uchr: " << (int)e << "/" << std::bitset<8>(e) << std::endl;
+    std::cout << "NOT - uchr: " << std::bitset<sizeof(e) * 8>(~e) <<  std::endl;
+    
+
+
     
         
 }
