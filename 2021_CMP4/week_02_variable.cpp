@@ -55,5 +55,10 @@ void run_02() {
     // 문자열 리터럴의 접두사(prefix)
     str = R"(string "with" \tackslash)"; //raw string
     cout << str << endl;
+    
+    int a = 126;
+    int b = 0;
+    ((3<=4) || (b = ++a));
+    cout << b << endl;
 
 }

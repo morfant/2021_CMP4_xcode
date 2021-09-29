@@ -10,5 +10,8 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <bitset> // 2진수를 표기하기 위한 라이브러리
+
 
 #endif /* common_lib_h */

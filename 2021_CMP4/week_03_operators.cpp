@@ -7,7 +7,7 @@
 
 #include "common_lib.h"
 #include "week_03_operators.hpp"
-#include <bitset> // 2진수를 표기하기 위한 라이브러리
+
 
 using namespace std;
 
@@ -67,7 +67,10 @@ void run_03() {
     std::cout << "NOT - uchr: " << std::bitset<sizeof(e) * 8>(~e) <<  std::endl;
     
 
+    float f = 3.1415;
+    int i = 10;
+    int result = f * i; // make correct
 
+    cout << result << endl;
     
-        
 }
