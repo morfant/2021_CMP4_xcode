@@ -8,9 +8,6 @@
 #include "common_lib.h"
 #include "week_04_basic_io.hpp"
 
-using namespace std;
-
-
 void run_04() {
     cout << "============ Week 04 ============" << endl;
 

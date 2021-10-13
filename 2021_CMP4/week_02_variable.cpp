@@ -9,7 +9,6 @@
 #include "week_02_variable.hpp"
 #define NEW_LINE '\n'
 
-using namespace std;
 
 void run_02() {
     cout << "============ Week 02 ============" << endl;
