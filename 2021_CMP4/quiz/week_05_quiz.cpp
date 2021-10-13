@@ -6,7 +6,6 @@
 //
 
 #include "common_lib.h"
-#include <stdio.h>
 
 void run_quiz_05() {
     cout << "============== Quiz 05 ==============" << endl;
