@@ -34,11 +34,37 @@ void printMinus(int n) {
     cout << str << endl;
 }
 
+int mod(int a, int b = 7) {
+    int result = 0;
+    result = a % b;
+    return result;
+    
+    // return a % b;
+}
+
+void con(string& a, string& b) {
+    cout << a + b << endl;
+}
 
 void run_quiz_06() {
     cout << "============== Quiz 06 ==============" << endl;
     
     cout << "--------1--------" << endl;
+    cout << mod(9543, 3) << endl;
+    
+    cout << "--------2--------" << endl;
+    string a = "Hello";
+    string b = " World!";
+    con(a, b);
+    
+    cout << "--------3--------" << endl;
+    cout << mod(9543) << endl;
+    
+    cout << "--------5--------" << endl;
+    printMinus(5); // "-----"
+    
+    
+
     
     // f0 = 0, f1 = 1, fn+2 = fn + fn+1
     

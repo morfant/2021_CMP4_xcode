@@ -8,6 +8,7 @@
 #include "common_lib.h"
 #include "week_06_functions.hpp"
 
+
 // 함수 템플릿
 template <class T>
 T max_(T a, T b) {
