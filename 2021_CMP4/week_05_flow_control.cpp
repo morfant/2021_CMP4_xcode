@@ -15,83 +15,83 @@ using namespace chrono;
 
 void run_05() {
     
-//    int n = 10; // 초기화
-//
-//    while (n > 0) { // 조건
-//        cout << n << ", ";
-//        --n; // 증감표현식
-////        sleep_for (milliseconds(100));
-//    }
-//
-//    cout << endl;
-//
-//    for (int n = 10; n > 0; --n) { // cpp
-//        cout << n << ", ";
-//    }
-//
-//    n = 0;
-//    for (;n<10;) {
-//        --n;
-//    }
-//
-//    cout << endl;
-//
-//    string str;
-//    do {
-//        cout << "Enter text: ";
-//        getline(cin, str);
-//        cout << "Your entered: " << str << '\n';
-//    } while (str != "goodbye");
-//
-//
-//    cout << endl;
+    //    int n = 10; // 초기화
+    //
+    //    while (n > 0) { // 조건
+    //        cout << n << ", ";
+    //        --n; // 증감표현식
+    ////        sleep_for (milliseconds(100));
+    //    }
+    //
+    //    cout << endl;
+    //
+    //    for (int n = 10; n > 0; --n) { // cpp
+    //        cout << n << ", ";
+    //    }
+    //
+    //    n = 0;
+    //    for (;n<10;) {
+    //        --n;
+    //    }
+    //
+    //    cout << endl;
+    //
+    //    string str;
+    //    do {
+    //        cout << "Enter text: ";
+    //        getline(cin, str);
+    //        cout << "Your entered: " << str << '\n';
+    //    } while (str != "goodbye");
+    //
+    //
+    //    cout << endl;
     
     string str {"Hello!"}; // ⇒ ‘H’, ‘e’, ‘l’, ‘l’, ‘o’, ‘!’
-//    string str = “Hello!”;
-
+    //    string str = “Hello!”;
+    
     // str이 char의 연속체이므로 그 요소(element)인 char c로 선언이 가능하다.
     // c는 str 안의 모든 char 값을 돌아가며 가지게 된다.
     for (char c : str)
-      {
+    {
         cout << "[" << c << "]";
-      }
+    }
     cout << '\n';
     
-//    "Hello!".do{|c, i| c.postln; };
+    //    "Hello!".do{|c, i| c.postln; };
     
-//    for (var i = 0 ; i < 100 ; i++) {
-//
-//    }
+    //    for (var i = 0 ; i < 100 ; i++) {
+    //
+    //    }
     
     
-//    for (int n = 10; n > 0; n--)
-//    {
-//        cout << n << ", ";
-//        if (n == 3)
-//        {
-//          cout << "countdown aborted!";
-//          break; // 조건과 상관없이 루프를 벗어나게 한다
-//        }
-//    }
+    //    for (int n = 10; n > 0; n--)
+    //    {
+    //        cout << n << ", ";
+    //        if (n == 3)
+    //        {
+    //          cout << "countdown aborted!";
+    //          break; // 조건과 상관없이 루프를 벗어나게 한다
+    //        }
+    //    }
     
     cout << endl;
     
     for (int n = 5; n > 0; n--) {
-       if (n == 3) continue;
-       cout << n << ", ";
-     }
-     cout << "liftoff!\n";
+        if (n == 3) continue;
+        cout << n << ", ";
+    }
+    cout << "liftoff!\n";
     
     
     
     
     
     int n=10;
-   mylabel:
-     cout << n << ", ";
-     n--;
-     if (n>0) goto mylabel; // 아무런 조건 없이 정해진 라벨로 점프한다.
-     cout << "liftoff!\n";
+mylabel:
+    cout << n << ", ";
+    n--;
+    if (n>0) goto mylabel; // 아무런 조건 없이 정해진 라벨로 점프한다.
+    cout << "liftoff!\n";
     
     
     int x = 1;
@@ -99,7 +99,7 @@ void run_05() {
     switch (x) {
         case 1:
             cout << "x = 1" << endl;
-//            break;
+            //            break;
             
         case 2:
             cout << "x = 2" << endl;
@@ -111,6 +111,18 @@ void run_05() {
     }
     
     
+    for (int i=0, n=1; n<101; n++)
+    {
+        //        cout << n << ", ";
+        if (n%3 == 0) i++;
+        //        cout << i << endl;
+        if (n == 100) {
+            cout << "the number of multiples of '3' between 0~100 is "
+            << i << endl;
+            //            break;
+        }
+    }
     
+
     
 }

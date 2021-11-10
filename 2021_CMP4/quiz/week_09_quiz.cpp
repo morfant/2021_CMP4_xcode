@@ -1,62 +1,27 @@
 //
-//  week_06_quiz.cpp
+//  week_09_quiz.cpp
 //  2021_CMP4
 //
-//  Created by Gang il Lee on 2021/10/13.
+//  Created by Gang il Lee on 2021/10/31.
 //
 
 #include "common_lib.h"
-#include "week_06_quiz.hpp"
+#include "week_09_quiz.hpp"
 
-int fib(int n) {
+void increase (void* data, int psize)
+{
+  if ( psize == sizeof(char) )
+  { char* pchar; pchar=(char*)data; ++(*pchar); }
+  else if (psize == sizeof(int) )
+  { int* pint; pint=(int*)data; ++(*pint); }
+}
+
+void run_quiz_09() {
+    // n을 주차에 맞는 숫자로 바꾸세요.
+    cout << "============== Quiz 09 ==============" << endl;
     
-    int rslt = 0;
-    if (n >= 0) {
-        
-        if (n == 0) {
-            rslt = 0;
-        } else if (n == 1) {
-            rslt = 1;
-        } else {
-            rslt = fib(n-1) + fib(n-2);
-        }
-
-    }
-    
-    return rslt;
-}
-
-void printMinus(int n) {
-    string str = "";
-    for (int i = 0; i < n; i++) {
-        str += "-";
-    }
-    cout << str << endl;
-}
-
-int mod(int a, int b = 7) {
-    int result = 0;
-    result = a % b;
-    return result;
-}
-
-int multiply(int a, int b = 2) {
-    return a*b;
-}
-
-template <class T>
-T mult(T a, T b) {
-    return a * b;
-}
-
-void con(string& a, string& b) {
-    cout << a + b << endl;
-}
-
-void run_quiz_06() {
-    cout << "============== Quiz 06 ==============" << endl;
-    
-    int selected [] = {1,2,3,4,5,6,7,8,9,10};
+    // 실행해 볼 문제의 번호를 적으세요
+    int selected [] = {4};
     string space = "\n\n";
     
     for (int i : selected) {
@@ -64,7 +29,7 @@ void run_quiz_06() {
             case 1:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                cout << mod(9543, 3) << endl;
+                // 이 주석을 지우고 답을 작성 하세요
                 
             }
                 cout << space << endl;
@@ -73,9 +38,8 @@ void run_quiz_06() {
             case 2:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                string a = "Hello";
-                string b = " World!";
-                con(a, b);
+                // 이 주석을 지우고 답을 작성 하세요
+                
             }
                 cout << space << endl;
                 break;
@@ -83,7 +47,10 @@ void run_quiz_06() {
             case 3:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                cout << multiply(9543) << endl;
+                int x = 20;
+                int * ptr = &x;
+                
+                cout << *ptr << " -> " << &(*ptr) << " -> " << *(&(*ptr)) << endl;
                 
             }
                 cout << space << endl;
@@ -92,8 +59,9 @@ void run_quiz_06() {
             case 4:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                cout << "1) test() 함수의 선언이 main() 함수 이전이어야 함.\n2) test() 함수의 리턴 타입을 string으로 수정해야 함." << endl;
 
+                
+                
             }
                 cout << space << endl;
                 break;
@@ -101,7 +69,18 @@ void run_quiz_06() {
             case 5:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                printMinus(5); // "-----"
+                int arr [5] = {1, 2, 3, 4, 5};
+                int * p = arr;
+                cout << *p++ << endl; // 1
+                cout << *++p << endl; // 3
+                cout << ++*p << endl; // 4
+                cout << (*p)++ << endl; // 4
+                
+                cout << space << endl;
+                
+                for (int i : arr) {
+                    cout << i << endl;
+                }
                 
             }
                 cout << space << endl;
@@ -110,7 +89,7 @@ void run_quiz_06() {
             case 6:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                cout << fib(10) << endl;
+                // 이 주석을 지우고 답을 작성 하세요
                 
             }
                 cout << space << endl;
@@ -119,9 +98,8 @@ void run_quiz_06() {
             case 7:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                for (int i = 0; i < 10; i++) {
-                    printMinus(fib(i));
-                }
+                // 이 주석을 지우고 답을 작성 하세요
+                
             }
                 cout << space << endl;
                 break;
@@ -129,7 +107,13 @@ void run_quiz_06() {
             case 8:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                cout << "c++은 인자의 수나 타입이 다를 경우 같은 이름의 함수 정의(overload)를 허용한다." << endl;
+                  char a = 'x';
+                  int b = 1602;
+                  increase (&a, sizeof(a));
+                  increase (&b, sizeof(b));
+                  cout << a << ", " << b << '\n';
+
+
             }
                 cout << space << endl;
                 break;
@@ -137,7 +121,7 @@ void run_quiz_06() {
             case 9:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                cout << "리턴값만 다른 경우의 함수 중복(overload)이 불가능하다." << endl;
+                // 이 주석을 지우고 답을 작성 하세요
                 
             }
                 cout << space << endl;
@@ -146,21 +130,23 @@ void run_quiz_06() {
             case 10:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
-                cout << mult(10.2f, 4.5f) << endl;
-                
-                double a = 3.14, b = 3.6;
-                cout << mult(a, b) << endl;
+                // 이 주석을 지우고 답을 작성 하세요
                 
             }
                 cout << space << endl;
                 break;
-                
+            // 11 시작
             case 11:
             {   cout << "--------"+to_string(i)+"--------" << endl;
                 
+                // 이 주석을 지우고 답을 작성 하세요
+                
             }
                 cout << space << endl;
                 break;
+            // 11 끝.
+                
+            // 더 많은 번호가 필요할 경우 '11 시작' - '11 끝' 사이를 복사하고 숫자를 증가시켜 사용하세요.
                 
             default:
             {
@@ -168,7 +154,6 @@ void run_quiz_06() {
             }
                 break;
         }
-        
     }
  
 
